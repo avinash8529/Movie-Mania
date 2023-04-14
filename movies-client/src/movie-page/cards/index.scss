@@ -1,0 +1,208 @@
+$color_1: white;
+$color_2: #383428;
+$color_3: #ff9800;
+$color_4: #ffcc80;
+$font-family_1: 'Nunito';
+$background-color_1: #212121;
+$background-color_2: #383428;
+
+body {
+	background-color: $background-color_1 !important;
+	background-color: $background-color_1 !important;
+}
+
+.grid-wrapper {
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-gap: 20px;
+}
+
+.box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin-right: 1500px;
+}
+
+.card {
+	max-width: 300px;
+	margin: 50px 10px;
+	max-width: 300px;
+	margin: 50px 10px;
+}
+
+.card-container {
+	display: -ms-grid;
+	display: grid;
+	-webkit-perspective: 700px;
+	perspective: 700px;
+	padding-bottom: 30px;
+	display: -ms-grid;
+	display: grid;
+	-webkit-perspective: 700px;
+	perspective: 700px;
+	padding-bottom: 30px;
+
+	&:hover {
+		.card-flip {
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+		}
+	}
+}
+
+.card-title {
+	p {
+		font-family: $font-family_1 !important;
+		text-align: center;
+		color: $color_1;
+		font-family: $font-family_1 !important;
+		text-align: center;
+		color: $color_1;
+	}
+}
+
+h4 {
+	font-family: $font-family_1 !important;
+	text-align: center;
+	color: $color_1;
+	font-family: $font-family_1 !important;
+	text-align: center;
+	color: $color_1;
+}
+
+h5 {
+	font-family: $font-family_1 !important;
+	text-align: center;
+	color: $color_1;
+	font-family: $font-family_1 !important;
+	text-align: center;
+	color: $color_1;
+}
+
+.card-text {
+	font-family: $font-family_1 !important;
+	text-align: center;
+	color: $color_1;
+	font-family: $font-family_1 !important;
+	text-align: center;
+	color: $color_1;
+}
+
+.card-flip {
+	height: 200px;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: 1fr;
+	-ms-grid-columns: 1fr;
+	grid-template: 1fr / 1fr;
+	grid-template-areas: "frontAndBack";
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-rows: 1fr;
+	-ms-grid-columns: 1fr;
+	grid-template: 1fr / 1fr;
+	grid-template-areas: "frontAndBack";
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: all 0.7s ease;
+	transition: all 0.7s ease;
+
+	div {
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+	}
+}
+
+.front {
+	margin-top: 200px;
+	grid-row: 1;
+	grid-column: 1;
+	grid-area: frontAndBack;
+	background-color: $background-color_2 !important;
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: frontAndBack;
+	background-color: $background-color_2 !important;
+}
+
+.back {
+	
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: frontAndBack;
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	background-color: $background-color_2 !important;
+	margin: 0;
+	padding: 0;
+	-ms-grid-row: 1;
+	-ms-grid-column: 1;
+	grid-area: frontAndBack;
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	background-color: $background-color_2 !important;
+	margin-top: 200px;
+	padding: 0;
+}
+
+.btn {
+	color: $color_2 !important;
+	color: $color_2 !important;
+
+	&:hover {
+		color: $color_1 !important;
+		color: $color_1 !important;
+	}
+}
+
+.rating {
+	text-decoration: none;
+	color: $color_3 !important;
+	text-decoration: none;
+	color: $color_3 !important;
+
+	&:hover {
+		text-decoration: none;
+		color: $color_4 !important;
+		text-decoration: none;
+		color: $color_4 !important;
+	}
+}
+
+.movie {
+	position: fixed;
+	z-index: -1;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	bottom: 0;
+	position: fixed;
+	z-index: -1;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	bottom: 0;
+}
